@@ -17,7 +17,7 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: registry.cloud.okteto.net/pchico83/hello-world:golang2
+      - image: registry.cloud.okteto.net/pchico83/hello-world:golang4
         name: hello-world
 ---
 
