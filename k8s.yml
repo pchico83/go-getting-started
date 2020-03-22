@@ -1,3 +1,4 @@
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,9 +17,8 @@ spec:
         app: hello-world
     spec:
       containers:
-      - image: registry.cloud.okteto.net/pchico83/hello-world:golang
+      - image: registry.cloud.okteto.net/pchico83/hello-world:golang2
         name: hello-world
-
 ---
 
 apiVersion: v1
@@ -28,7 +28,7 @@ metadata:
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
-  type: ClusterIP  
+  type: ClusterIP
   ports:
   - name: "hello-world"
     port: 8080
